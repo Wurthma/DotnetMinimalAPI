@@ -20,7 +20,8 @@ In `Models/Todo.cs` we can see an example of **Record**.
 `public record Todo(Guid Id, string Title, bool Done);`
 
 ## Pattern Matching
-In **Program.cs** you can the method get **/v1/todos**:
+
+In **Program.cs** we can see the method get **/v1/todos**:
 
 ```csharp
 app.MapGet("/v1/todos", (AppDbContext context) =>
