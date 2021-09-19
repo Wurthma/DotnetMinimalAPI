@@ -23,11 +23,11 @@ In `Models/Todo.cs` we can see an example of **Record**.
 In **Program.cs** you can the method get **/v1/todos**:
 
 ```csharp
-	app.MapGet("/v1/todos", (AppDbContext context) =>
-    {
-        var todos = context.Todos;
-        return todos is not null ? Results.Ok(todos) : Results.NotFound();
-    });
+app.MapGet("/v1/todos", (AppDbContext context) =>
+{
+    var todos = context.Todos;
+    return todos is not null ? Results.Ok(todos) : Results.NotFound();
+});
 ```
 
 In the method return we use a new C# feature called **Pattern Matching**, where I compare `todos is not null` instead of `all != null`.
